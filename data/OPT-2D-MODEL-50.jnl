@@ -1,0 +1,676 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(modelType=STANDARD_EXPLICIT, name='LC-1')
+del mdb.models['Model-1']
+mdb.models['LC-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-600.0, 100.0), point2=
+    (-600.0, -100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-600.0, -100.0), 
+    point2=(0.0, -100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(0.0, -100.0), point2=(
+    600.0, -100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(600.0, -100.0), point2=
+    (600.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(600.0, 100.0), point2=(
+    600.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(600.0, 100.0), point2=(
+    580.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(580.0, 100.0), point2=(
+    560.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(560.0, 100.0), point2=(
+    540.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(540.0, 100.0), point2=(
+    520.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(520.0, 100.0), point2=(
+    500.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(500.0, 100.0), point2=(
+    480.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(480.0, 100.0), point2=(
+    460.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(460.0, 100.0), point2=(
+    440.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(440.0, 100.0), point2=(
+    420.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(420.0, 100.0), point2=(
+    400.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(400.0, 100.0), point2=(
+    380.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(380.0, 100.0), point2=(
+    360.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(360.0, 100.0), point2=(
+    340.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(340.0, 100.0), point2=(
+    320.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(320.0, 100.0), point2=(
+    300.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(300.0, 100.0), point2=(
+    280.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(280.0, 100.0), point2=(
+    260.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(260.0, 100.0), point2=(
+    240.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(240.0, 100.0), point2=(
+    220.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(220.0, 100.0), point2=(
+    200.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(200.0, 100.0), point2=(
+    180.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(180.0, 100.0), point2=(
+    160.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(160.0, 100.0), point2=(
+    140.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(140.0, 100.0), point2=(
+    120.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(120.0, 100.0), point2=(
+    100.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(100.0, 100.0), point2=(
+    80.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(80.0, 100.0), point2=(
+    60.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(60.0, 100.0), point2=(
+    40.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(40.0, 100.0), point2=(
+    20.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(20.0, 100.0), point2=(
+    0.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(0.0, 100.0), point2=(
+    -20.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-20.0, 100.0), point2=(
+    -40.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-40.0, 100.0), point2=(
+    -60.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-60.0, 100.0), point2=(
+    -80.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-80.0, 100.0), point2=(
+    -100.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-100.0, 100.0), point2=
+    (-120.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-120.0, 100.0), point2=
+    (-140.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-140.0, 100.0), point2=
+    (-160.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-160.0, 100.0), point2=
+    (-180.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-180.0, 100.0), point2=
+    (-200.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-200.0, 100.0), point2=
+    (-220.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-220.0, 100.0), point2=
+    (-240.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-240.0, 100.0), point2=
+    (-260.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-260.0, 100.0), point2=
+    (-280.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-280.0, 100.0), point2=
+    (-300.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-300.0, 100.0), point2=
+    (-320.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-320.0, 100.0), point2=
+    (-340.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-340.0, 100.0), point2=
+    (-360.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-360.0, 100.0), point2=
+    (-380.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-380.0, 100.0), point2=
+    (-400.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-400.0, 100.0), point2=
+    (-420.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-420.0, 100.0), point2=
+    (-440.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-440.0, 100.0), point2=
+    (-460.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-460.0, 100.0), point2=
+    (-480.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-480.0, 100.0), point2=
+    (-500.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-500.0, 100.0), point2=
+    (-520.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-520.0, 100.0), point2=
+    (-540.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-540.0, 100.0), point2=
+    (-560.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-560.0, 100.0), point2=
+    (-580.0, 100.0))
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-580.0, 100.0), point2=
+    (-600.0, 100.0))
+mdb.models['LC-1'].Part(dimensionality=TWO_D_PLANAR, name='PART-1', type=
+    DEFORMABLE_BODY)
+mdb.models['LC-1'].parts['PART-1'].BaseShell(sketch=
+    mdb.models['LC-1'].sketches['__profile__'])
+del mdb.models['LC-1'].sketches['__profile__']
+mdb.models['LC-1'].parts['PART-1'].Set(faces=
+    mdb.models['LC-1'].parts['PART-1'].faces.findAt(((-593.333333, 33.333333, 
+    0.0), (0.0, 0.0, 1.0)), ), name='PART-1')
+mdb.models['LC-1'].Material(name='STEEL')
+mdb.models['LC-1'].materials['STEEL'].Elastic(table=((10000.0, 0.2), ))
+mdb.models['LC-1'].HomogeneousSolidSection(material='STEEL', name='SECTION-1', 
+    thickness=None)
+mdb.models['LC-1'].parts['PART-1'].SectionAssignment(offset=0.0, offsetField=''
+    , offsetType=MIDDLE_SURFACE, region=
+    mdb.models['LC-1'].parts['PART-1'].sets['PART-1'], sectionName='SECTION-1', 
+    thicknessAssignment=FROM_SECTION)
+mdb.models['LC-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['LC-1'].rootAssembly.Instance(dependent=OFF, name='PART-1-1', part=
+    mdb.models['LC-1'].parts['PART-1'])
+mdb.models['LC-1'].ConstrainedSketch(gridSpacing=100.0, name='__profile__', 
+    sheetSize=4000.0, transform=
+    mdb.models['LC-1'].parts['PART-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['LC-1'].parts['PART-1'].faces.findAt((0.0, 0.0, 
+    0.0), ), sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.0, 0.0, 
+    0.0)))
+mdb.models['LC-1'].parts['PART-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['LC-1'].sketches['__profile__'])
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-600.0, 95.0), point2=(
+    600.0, 95.0))
+mdb.models['LC-1'].parts['PART-1'].PartitionFaceBySketch(faces=
+    mdb.models['LC-1'].parts['PART-1'].faces.findAt(((0.0, 0.0, 0.0), )), 
+    sketch=mdb.models['LC-1'].sketches['__profile__'])
+del mdb.models['LC-1'].sketches['__profile__']
+mdb.models['LC-1'].rootAssembly.regenerate()
+mdb.models['LC-1'].ConstrainedSketch(gridSpacing=100.0, name='__profile__', 
+    sheetSize=4000.0, transform=
+    mdb.models['LC-1'].parts['PART-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['LC-1'].parts['PART-1'].faces.findAt((0.0, 0.0, 
+    0.0), ), sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.0, 0.0, 
+    0.0)))
+mdb.models['LC-1'].parts['PART-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['LC-1'].sketches['__profile__'])
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(-595.0, -100.0), 
+    point2=(-595.0, 95.0))
+mdb.models['LC-1'].parts['PART-1'].PartitionFaceBySketch(faces=
+    mdb.models['LC-1'].parts['PART-1'].faces.findAt(((0.0, 0.0, 0.0), )), 
+    sketch=mdb.models['LC-1'].sketches['__profile__'])
+del mdb.models['LC-1'].sketches['__profile__']
+mdb.models['LC-1'].rootAssembly.regenerate()
+mdb.models['LC-1'].ConstrainedSketch(gridSpacing=100.0, name='__profile__', 
+    sheetSize=4000.0, transform=
+    mdb.models['LC-1'].parts['PART-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['LC-1'].parts['PART-1'].faces.findAt((0.0, 0.0, 
+    0.0), ), sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.0, 0.0, 
+    0.0)))
+mdb.models['LC-1'].parts['PART-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['LC-1'].sketches['__profile__'])
+mdb.models['LC-1'].sketches['__profile__'].Line(point1=(595.0, -100.0), point2=
+    (595.0, 95.0))
+mdb.models['LC-1'].parts['PART-1'].PartitionFaceBySketch(faces=
+    mdb.models['LC-1'].parts['PART-1'].faces.findAt(((0.0, 0.0, 0.0), )), 
+    sketch=mdb.models['LC-1'].sketches['__profile__'])
+del mdb.models['LC-1'].sketches['__profile__']
+mdb.models['LC-1'].rootAssembly.regenerate()
+mdb.models['LC-1'].rootAssembly.Set(faces=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].faces.findAt(((0.0, 
+    97.5, 0.0), )), name='TOP-LAYER')
+mdb.models['LC-1'].rootAssembly.Set(faces=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].faces.findAt(((0.0, 
+    -2.5, 0.0), )), name='BOTTOM-LAYER')
+mdb.models['LC-1'].rootAssembly.Set(faces=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].faces.findAt(((597.5, 
+    0.0, 0.0), )), name='RIGHT-LAYER')
+mdb.models['LC-1'].rootAssembly.Set(faces=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].faces.findAt(((
+    -597.5, 0.0, 0.0), )), name='LEFT-LAYER')
+mdb.models['LC-1'].rootAssembly.Set(faces=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].faces.findAt(((0.0, 
+    97.5, 0.0), ), ((0.0, -2.5, 0.0), ), ((-597.5, 0.0, 0.0), ), ((597.5, 0.0, 
+    0.0), ), ), name='DESIGN-AREA')
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-1', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -590.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-2', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -570.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-3', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -550.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-4', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -530.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-5', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -510.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-6', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -490.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-7', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -470.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-8', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -450.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-9', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -430.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-10', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -410.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-11', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -390.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-12', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -370.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-13', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -350.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-14', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -330.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-15', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -310.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-16', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -290.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-17', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -270.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-18', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -250.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-19', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -230.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-20', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -210.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-21', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -190.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-22', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -170.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-23', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -150.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-24', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -130.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-25', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -110.0, 100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-26', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((-90.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-27', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((-70.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-28', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((-50.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-29', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((-30.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-30', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((-10.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-31', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((10.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-32', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((30.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-33', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((50.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-34', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((70.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-35', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((90.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-36', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((110.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-37', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((130.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-38', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((150.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-39', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((170.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-40', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((190.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-41', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((210.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-42', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((230.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-43', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((250.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-44', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((270.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-45', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((290.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-46', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((310.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-47', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((330.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-48', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((350.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-49', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((370.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-50', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((390.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-51', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((410.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-52', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((430.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-53', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((450.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-54', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((470.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-55', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((490.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-56', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((510.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-57', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((530.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-58', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((550.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-59', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((570.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Surface(name='LOAD-TILE-60', side1Edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((590.0, 
+    100.0, 0.0), )))
+mdb.models['LC-1'].rootAssembly.Set(edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((
+    -600.0, 0.0, 0.0), )), name='EDGE-BC-1')
+mdb.models['LC-1'].rootAssembly.Set(edges=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt(((600.0, 
+    0.0, 0.0), )), name='EDGE-BC-2')
+mdb.models['LC-1'].rootAssembly.Set(name='NODE-DEMOLD', vertices=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].vertices.findAt(((
+    -600.0, 95.0, 0.0), )))
+mdb.models['LC-1'].StaticStep(name='STEP-1', previous='Initial')
+del mdb.models['LC-1'].fieldOutputRequests['F-Output-1']
+mdb.models['LC-1'].FieldOutputRequest(createStepName='STEP-1', name=
+    'F-Output-1', variables=('S', 'MISES', 'E', 'EE', 'NE', 'U', 'RF', 'P', 
+    'COORD', 'ENER', 'ELEN', 'ELEDEN'))
+mdb.models['LC-1'].rootAssembly.ReferencePoint(point=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].InterestingPoint(
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt((-600.0, 
+    0.0, 0.0), ), MIDDLE))
+mdb.models['LC-1'].rootAssembly.Set(name='RP-1', referencePoints=(
+    mdb.models['LC-1'].rootAssembly.referencePoints[72], ))
+mdb.models['LC-1'].rootAssembly.ReferencePoint(point=
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].InterestingPoint(
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'].edges.findAt((600.0, 
+    0.0, 0.0), ), MIDDLE))
+mdb.models['LC-1'].rootAssembly.Set(name='RP-2', referencePoints=(
+    mdb.models['LC-1'].rootAssembly.referencePoints[74], ))
+mdb.models['LC-1'].RigidBody(name='CONSTRAINT-BC-1', pinRegion=
+    mdb.models['LC-1'].rootAssembly.sets['EDGE-BC-1'], refPointRegion=
+    mdb.models['LC-1'].rootAssembly.sets['RP-1'])
+mdb.models['LC-1'].RigidBody(name='CONSTRAINT-BC-2', pinRegion=
+    mdb.models['LC-1'].rootAssembly.sets['EDGE-BC-2'], refPointRegion=
+    mdb.models['LC-1'].rootAssembly.sets['RP-2'])
+mdb.models['LC-1'].DisplacementBC(createStepName='Initial', name='BC-RP-1', 
+    region=mdb.models['LC-1'].rootAssembly.sets['RP-1'], u1=SET, u2=SET)
+mdb.models['LC-1'].DisplacementBC(createStepName='Initial', name='BC-RP-2', 
+    region=mdb.models['LC-1'].rootAssembly.sets['RP-2'], u1=SET, u2=SET)
+mdb.models['LC-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'], ), size=5.0)
+mdb.models['LC-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['LC-1'].rootAssembly.instances['PART-1-1'], ))
+mdb.Job(memory=50, memoryUnits=PERCENTAGE, model='LC-1', name='MODEL-CHECK', 
+    numCpus=4, numDomains=4)
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-1', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-1'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-2', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-2'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-3', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-3'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-4', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-4'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-5', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-5'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-6', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-6'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-7', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-7'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-8', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-8'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-9', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-9'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-10', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-10'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-11', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-11'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-12', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-12'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-13', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-13'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-14', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-14'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-15', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-15'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-16', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-16'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-17', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-17'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-18', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-18'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-19', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-19'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-20', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-20'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-21', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-21'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-22', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-22'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-23', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-23'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-24', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-24'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-25', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-25'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-26', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-26'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-27', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-27'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-28', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-28'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-29', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-29'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-30', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-30'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-31', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-31'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-32', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-32'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-33', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-33'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-34', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-34'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-35', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-35'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-36', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-36'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-37', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-37'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-38', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-38'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-39', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-39'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-40', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-40'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-41', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-41'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-42', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-42'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-43', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-43'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-44', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-44'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-45', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-45'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-46', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-46'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-47', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-47'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-48', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-48'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-49', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-49'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-50', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-50'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-51', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-51'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-52', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-52'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-53', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-53'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-54', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-54'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-55', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-55'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-56', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-56'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-57', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-57'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-58', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-58'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-59', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-59'])
+mdb.models['LC-1'].Pressure(createStepName='STEP-1', magnitude=1.0, name=
+    'LOAD-TILE-60', region=
+    mdb.models['LC-1'].rootAssembly.surfaces['LOAD-TILE-60'])
+mdb.models['LC-1'].TopologyTask(densityMoveLimit=0.2, 
+    elementDensityDeltaStopCriteria=0.005, freezeBoundaryConditionRegions=ON, 
+    freezeLoadRegions=ON, initialDensity=0.5, materialInterpolationPenalty=3.0, 
+    materialInterpolationTechnique=SIMP, maxDensity=1.0, minDensity=0.001, 
+    name='OPTIMIZATION-TASK', objectiveFunctionDeltaStopCriteria=0.001, region=
+    mdb.models['LC-1'].rootAssembly.sets['DESIGN-AREA'])
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].SingleTermDesignResponse(
+    identifier='STRAIN_ENERGY', name='D-RESP-1-STRAIN', operation=SUM, region=
+    MODEL, stepOperation=SUM, stepOptions=((ALL, '', ALL, ALL, ''), ))
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].SingleTermDesignResponse(
+    drivingRegion=None, identifier='VOLUME', name='D-RESP-2-VOLUME', operation=
+    SUM, region=MODEL, stepOptions=())
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].ObjectiveFunction(
+    name='OBJECTIVE-1-STRAIN', objectives=((OFF, 'D-RESP-1-STRAIN', 1.0, 0.0, 
+    ''), ))
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].OptimizationConstraint(
+    designResponse='D-RESP-2-VOLUME', name='CONSTRAINT-1-VOLUME', 
+    restrictionMethod=RELATIVE_LESS_THAN_EQUAL, restrictionValue=0.5)
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].FrozenArea(name=
+    'FROZEN-AREA-TOP-LAYER', region=
+    mdb.models['LC-1'].rootAssembly.sets['TOP-LAYER'])
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].FrozenArea(name=
+    'FROZEN-AREA-LEFT-LAYER', region=
+    mdb.models['LC-1'].rootAssembly.sets['LEFT-LAYER'])
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].FrozenArea(name=
+    'FROZEN-AREA-RIGHT-LAYER', region=
+    mdb.models['LC-1'].rootAssembly.sets['RIGHT-LAYER'])
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].TopologyMemberSize(
+    minThickness=15.0, name='MIN-THICKNESS', region=
+    mdb.models['LC-1'].rootAssembly.sets['DESIGN-AREA'], sizeRestriction=
+    MINIMUM)
+mdb.models['LC-1'].optimizationTasks['OPTIMIZATION-TASK'].TopologyPlanarSymmetry(
+    axis=AXIS_1, name='PLANAR-SYM', region=
+    mdb.models['LC-1'].rootAssembly.sets['DESIGN-AREA'])
+mdb.OptimizationProcess(dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE, 
+    maxDesignCycle=50, model='LC-1', name='TEST-OPT-2D-MODEL-50', 
+    odbMergeFrequency=2, prototypeJob='TEST-OPT-2D-MODEL-50-JOB', saveEvery=
+    None, saveFirst=False, saveInitial=True, task='OPTIMIZATION-TASK')
+mdb.optimizationProcesses['TEST-OPT-2D-MODEL-50'].Job(memory=50, memoryUnits=
+    PERCENTAGE, model='LC-1', name='TEST-OPT-2D-MODEL-50-JOB', numCpus=4, 
+    numDomains=4)
+mdb.optimizationProcesses['TEST-OPT-2D-MODEL-50'].waitForCompletion()
+mdb.CombineOptResults(analysisFieldVariables=ALL, models=ALL, optIter=ALL, 
+    optResultLocation='C:\\data\\SIMULIA\\TEST-OPT-2D-MODEL-50', steps=(
+    'STEP-1', ))
+# Save by ycshao on 2018_11_05-15.03.05; build 6.14-1 2014_06_05-06.11.02 134264
