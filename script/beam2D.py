@@ -2,7 +2,6 @@
 ### 2D BEAM: BENCHMARK FOR TOPOLOGY OPTIMIZATION                                                     ###
 ### Clamped beam                                                                                     ###
 ### Yecheng SHAO                                                                                     ###
-### Student ID: 11824004                                                                             ###
 ### version 11-05-2018                                                                               ###
 ### abaqus version: 6.14                                                                             ###
 ########################################################################################################
